@@ -7,19 +7,19 @@
 		//perulangan untuk baris pertama sampai tengah
 		if ($i <= $mid) {
 			//perulangan untuk indentasi
-			for ($j=1; $j < $i; $j++) { 
+			for ($j=1; $j < ($i*2); $j++) { 
 				echo "&nbsp";
 			}
 
 			if ($i != $mid) {
 				echo $i;
 			} else {
-				echo " ". $i;
+				echo " ".$i;
 			}
 			
 			//perulangan untuk mencetak spasi
 			$space = (($mid-1)-$i) + ($mid-$i) + 1;
-			for ($j=0; $j < $space; $j++) { 
+			for ($j=0; $j < ($space*2); $j++) { 
 				echo "&nbsp";
 			}
 
@@ -31,7 +31,7 @@
 		//perulangan untuk baris setelah tengah sampai akhir
 		} else {
 			//perulangan untuk indentasi
-			for ($j=$n; $j > $i; $j--) { 
+			for ($j=(($n*2)-$i); $j > ($i-1); $j--) { 
 				echo "&nbsp";
 			}
 
@@ -39,7 +39,7 @@
 
 			//perulangan untuk mencetak spasi
 			$space = (($i-1)-$mid) + ($i-$mid) + 1;
-			for ($j=0; $j < $space; $j++) { 
+			for ($j=0; $j < ($space*2); $j++) { 
 				echo "&nbsp";
 			}
 
