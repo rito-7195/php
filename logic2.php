@@ -1,5 +1,5 @@
 <?php
-	$n = 11;
+	$n = 9;
 	$mid = round($n / 2); //nilai tengah
 
 	//perulangan untuk mencetak baris
@@ -11,10 +11,14 @@
 				echo "&nbsp";
 			}
 
-			echo $i;
-
+			if ($i != $mid) {
+				echo $i;
+			} else {
+				echo " ". $i;
+			}
+			
 			//perulangan untuk mencetak spasi
-			$space = (($mid-1)-$i) + ($mid-$i);
+			$space = (($mid-1)-$i) + ($mid-$i) + 1;
 			for ($j=0; $j < $space; $j++) { 
 				echo "&nbsp";
 			}
@@ -34,7 +38,7 @@
 			echo (($n-$i) + 1);
 
 			//perulangan untuk mencetak spasi
-			$space = (($i-1)-$mid) + ($i-$mid);
+			$space = (($i-1)-$mid) + ($i-$mid) + 1;
 			for ($j=0; $j < $space; $j++) { 
 				echo "&nbsp";
 			}
